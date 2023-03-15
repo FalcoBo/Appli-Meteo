@@ -69,8 +69,10 @@ if (user_input == false) {
             const name = data.name;
 
             // Mise en place des injection HTML
+            
+            // OPTIMISATION
             // Faire une boucle pour simplifier et réduire la taille du code ?
-            // for (donnée_1, ) {
+            // for (donnee_1, donnee_2) {
             //     document.getElementById('ville').innerHTML = name;
             // }
 

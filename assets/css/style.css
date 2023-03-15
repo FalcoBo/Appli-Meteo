@@ -2,35 +2,91 @@
     max-width: 100%;
     padding: 0%;
     margin: 0%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body{
-    background: #3f87a6a1;
+    background:linear-gradient(0.9turn, #3f87a6a1, #3f87a6);
 }
 
+/* HEADER */
+header{
+    width: 90%;
+    height: 8vh;
+    padding: 1% 5% 1% 5% ;
+    background: linear-gradient(90turn, rgba(128, 128, 128, 0.493), rgba(128, 128, 128, 0.39));
+    align-items: center;
+    display: flex;
+    gap: 30%;
+}
+
+header h1{
+
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 200;
+}
+
+form{
+    width: 15%;
+}
+
+input{
+    width: 100%;
+    height: 2.5vh;
+}
+
+/* CONTENTs */
+
 #first_data{
+    color: aliceblue;
     text-align: center;
 }
 
+#ville{
+    font-size: 50px;
+}
+
+#temp{
+    font-size: 45px;
+}
+
+/* DESCRIPTIONS */
+
 #descriptions{
     width: 50%;
+    margin: 2.5% 25% 2.5% 25%;
     display: flex;
     gap: 2.5%;
     flex-wrap: wrap;
 }
 
 #card{
-    width: 28%;
-    height: auto;
-    padding: 1%;
+    width: 25%;
+    height: 15vh;
+    padding: 3%;
     margin-top: 3%;
     border-radius: 10px;
     box-shadow: 10px 5px 5px  #f3f3f380;
     background: linear-gradient(0.9turn, #0874a3, #3f87a6);
     color: aliceblue;
+    transition: 0.4s;
+}
+
+#card:hover{
+    width: 27%;
+    height: 17vh;
+    cursor: pointer;
 }
 
 #card p{
     margin: 2%;
+}
+
+/* FOOTER */
+
+footer{
+    width: 90%;
+    height: 15vh;
+    padding: 0 5% 0 5%;
 }
