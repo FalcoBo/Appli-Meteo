@@ -9,9 +9,13 @@
 </head>
 <body>
 
-    <h1>La ville : <span id="ville"></span></h1>
+<div id="first_data">
+    <h1><span id="ville"></span></h1>
     <h3>Température : <span id="temp"></span> C°</h3>
-    <div class="var_temp">
+</div>
+
+<div id="descriptions">
+    <div id="card" class="var_temp">
         <p>Température ressentit : <span id="feels"></span> C°</p>
         <p>Température Min : <span id="temp_min"></span> C°</p>
         <p>Température Max : <span id="temp_max"></span> C°</p>
@@ -19,12 +23,27 @@
         <p>Humiditée : <span id="humidity"></span> %</p>
     </div>
 
-    <div class="coord">
+    <div id="card" class="coord">
         <p>Longitude : <span id="lon"></span> C°</p>
         <p>Lattitude : <span id="lat"></span> C°</p>
     </div>
 
+    <div id="card" class="wind">
+        <p>Vitesse du vent : <span id="wind_speed"></span></p>
+        <p>Vent deg : <span id="wind_deg"></span></p>
+        <p>Raffale de vent : <span id="wind_gust"></span></p>
+    </div>
 
+    <div id="card">
+        <p>Nombre de nuages : <span id="clouds"></span></p>
+    </div>
+
+    <div id="card" class="generales">
+        <p>Pays : <span id="sys_country"></span></p>
+        <p>Levé du soleil : <span id="sys_sunrise"></span></p>
+        <p>Couché du soleil : <span id="sys_sunset"></span></p>
+    </div>
+</div>
 
     <script src="/main.js"></script>
 </body>

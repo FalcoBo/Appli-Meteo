@@ -2,5 +2,35 @@
     max-width: 100%;
     padding: 0%;
     margin: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+body{
+    background: #3f87a6a1;
+}
+
+#first_data{
+    text-align: center;
+}
+
+#descriptions{
+    width: 50%;
+    display: flex;
+    gap: 2.5%;
+    flex-wrap: wrap;
+}
+
+#card{
+    width: 28%;
+    height: auto;
+    padding: 1%;
+    margin-top: 3%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px  #f3f3f380;
+    background: linear-gradient(0.9turn, #0874a3, #3f87a6);
+    color: aliceblue;
+}
+
+#card p{
+    margin: 2%;
+}

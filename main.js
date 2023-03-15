@@ -47,10 +47,10 @@ if (user_input == false) {
             const wind = data.wind;
                 const wind_speed = wind.wind_speed;
                 const wind_deg = wind.deg;
-                const gust = wind.gust;
+                const wind_gust = wind.gust;
             // Données liées aux nuages 
             const clouds = data.clouds;
-                const all = clouds.all;
+                const all_clouds = clouds.all;
 
             const dt = data.dt;
 
@@ -91,8 +91,17 @@ if (user_input == false) {
             document.getElementById('humidity').innerHTML = humidity;
 
             // Wind
-            document.getElementById('pressure').innerHTML = pressure;
-            document.getElementById('humidity').innerHTML = humidity;
+            document.getElementById('wind_speed').innerHTML = wind_speed;
+            document.getElementById('wind_deg').innerHTML = wind_deg;
+            document.getElementById('wind_gust').innerHTML = wind_gust;
+
+            // CLouds
+            document.getElementById('clouds').innerHTML = all_clouds;
+            
+            // Générales
+            document.getElementById('sys_country').innerHTML = sys_country;
+            document.getElementById('sys_sunrise').innerHTML = sys_sunrise;
+            document.getElementById('sys_sunset').innerHTML = sys_sunset;
 
 
         } else {
