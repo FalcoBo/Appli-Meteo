@@ -2,22 +2,36 @@
 // et de faire afficher ses données dans l'appli 
 
 
-// Choix de la ville pour faire afficher la météo
-var user_input = prompt('input_ville');
-if (user_input == false) {
-    var input_ville = "Paris";
-} else {
-    input_ville = user_input;
+    // Input utilisateur
+    var user_input = document.getElementById('user_input').value;
+    var input_ville = "";
+    var input_default = "amsterdam";
+    if (user_input === "") {
+        input_ville = input_default;
+    } else {
+        input_ville = user_input;
+    }
+
+
+function Background_meteo(weather_main) {
+    if (weather_main == "Clouds") {
+        document.querySelector('body').style.background = ("grey");
+    } else if (weather_main ==  "Clear") {
+        document.querySelector('body').style.background = ("linear-gradient(0.9turn, #3f87a6a1, #3f87a6)");
+    }
 }
 
+function API(ville) {
     // Récupération de l'API météo avec la méthode fetch()
-    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + input_ville + "&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric")
+    // https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric")
     .then(Response => Response.json())
     .then(data => {
         // Key 
         var request_key = data.cod;
         if (request_key === 200 ) {
 
+        // Récupération des données de l'API
             // Coordonnées de la ville
             const coord = data.coord;
                 const lon = coord.lon;
@@ -76,6 +90,7 @@ if (user_input == false) {
             //     document.getElementById('ville').innerHTML = name;
             // }
 
+            // Name
             document.getElementById('ville').innerHTML = name;
 
             // Coord
@@ -99,15 +114,20 @@ if (user_input == false) {
 
             // CLouds
             document.getElementById('clouds').innerHTML = all_clouds;
-            
+
             // Générales
             document.getElementById('sys_country').innerHTML = sys_country;
             document.getElementById('sys_sunrise').innerHTML = sys_sunrise;
             document.getElementById('sys_sunset').innerHTML = sys_sunset;
 
+            Background_meteo(weather_main);
 
         } else {
             console.log("La clé de requette n'est pas")
     }
     })
     .catch(error => console.log(error));
+}
+
+
+API(input_ville);
