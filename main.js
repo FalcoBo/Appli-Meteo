@@ -1,4 +1,4 @@
-import {weather_background} from weather_background;
+// import { weather_background } from './weather/background.js'
 
 // Création de la fonction qui permettra de récupérer l'API
 // et de faire afficher ses données dans l'appli 
@@ -6,14 +6,14 @@ import {weather_background} from weather_background;
     // Input utilisateur
     var user_input = document.getElementById('user_input').value;
     var input_ville = "";
-    var input_default = "Paris";
+    var input_default = "paris";
     if (user_input === "") {
         input_ville = input_default;
     } else {
         input_ville = user_input;
     }
 
-function __Main__(ville) {
+function API(ville) {
     // Récupération de l'API météo avec la méthode fetch()
     // https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric")
@@ -74,6 +74,8 @@ function __Main__(ville) {
             const name_id = data.id;
             const name = data.name;
 
+            weather_background(weather_main);
+
             // Mise en place des injection HTML
             
             // OPTIMISATION
@@ -112,8 +114,6 @@ function __Main__(ville) {
             document.getElementById('sys_sunrise').innerHTML = sys_sunrise;
             document.getElementById('sys_sunset').innerHTML = sys_sunset;
 
-            // weather_background(weather_main);
-
         } else {
             console.log("La clé de requette n'est pas")
     }
@@ -122,4 +122,4 @@ function __Main__(ville) {
 }
 
 
-__Main__(input_ville);
+API(input_ville);

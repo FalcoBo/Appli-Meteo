@@ -62,7 +62,7 @@ input{
 
 #descriptions{
     width: 50%;
-    margin: 2.5% 25% 2.5% 25%;
+    padding: 2.5% 25% 2.5% 25%;
     display: flex;
     gap: 2.5%;
     flex-wrap: wrap;
