@@ -1,27 +1,19 @@
+import {weather_background} from weather_background;
+
 // Création de la fonction qui permettra de récupérer l'API
 // et de faire afficher ses données dans l'appli 
-
 
     // Input utilisateur
     var user_input = document.getElementById('user_input').value;
     var input_ville = "";
-    var input_default = "amsterdam";
+    var input_default = "Paris";
     if (user_input === "") {
         input_ville = input_default;
     } else {
         input_ville = user_input;
     }
 
-
-function Background_meteo(weather_main) {
-    if (weather_main == "Clouds") {
-        document.querySelector('body').style.background = ("grey");
-    } else if (weather_main ==  "Clear") {
-        document.querySelector('body').style.background = ("linear-gradient(0.9turn, #3f87a6a1, #3f87a6)");
-    }
-}
-
-function API(ville) {
+function __Main__(ville) {
     // Récupération de l'API météo avec la méthode fetch()
     // https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric")
@@ -120,7 +112,7 @@ function API(ville) {
             document.getElementById('sys_sunrise').innerHTML = sys_sunrise;
             document.getElementById('sys_sunset').innerHTML = sys_sunset;
 
-            Background_meteo(weather_main);
+            // weather_background(weather_main);
 
         } else {
             console.log("La clé de requette n'est pas")
@@ -130,4 +122,4 @@ function API(ville) {
 }
 
 
-API(input_ville);
+__Main__(input_ville);
