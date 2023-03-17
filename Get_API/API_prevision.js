@@ -10,9 +10,10 @@ function API_prevision() {
         if (request_key === 200 ) {
             // Récupération des données de l'API des prévisions
 
-            
+
         } else {
             console.log("La récupération de l'API n'a pas été effectuée")
         }
     })
+    .catch(error => console.log(error));
 }
