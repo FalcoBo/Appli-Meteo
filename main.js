@@ -11,9 +11,9 @@
      if (user_input === "") {
         ville = input_default; 
      } else {
-        ville =user_input;
-     }
-     
+        ville = user_input;
+     } 
+
 
     // Récupération de l'API météo avec la méthode fetch()
     // https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric
