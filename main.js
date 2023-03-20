@@ -30,7 +30,7 @@
                 const lon = coord.lon;
                 const lat = coord.lat;
 
-            // Météo
+            // Weather ..
             const weather = data.weather;
                 const weather_id = weather.id;
                 const weather_main = weather.main;
