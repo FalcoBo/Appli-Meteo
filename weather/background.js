@@ -1,12 +1,16 @@
 function weather_background(weather_main) {   
     // Variable changement du background
     // Ciel nuageux
+    var background_video = document.getElementById('background_video');
     if (weather_main = "Clouds") {
-        document.querySelector('body').style.background = "grey";
+        background_video.src = "./assets/video/Clouds.mp4";
     // Ciel clear
     } else if (weather_main =  "Clear") {
-        document.querySelector('body').style.background = "linear-gradient(0.9turn, #3f87a6a1, #3f87a6)";
+        background_video.src = "./assets/video/Clouds.mp4";
+    // Pluie
+    } else if (weather_main =  "Rainy") {
+        background_video.src = "./assets/video/Clouds.mp4";
     } else {
-        document.querySelector('body').style.background = "#FFFFFF";
+        background_video.src = "./assets/video/Clouds.mp4";
     }
 }

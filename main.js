@@ -75,7 +75,7 @@
             const name_id = data.id;
             const name = data.name;
 
-            // weather_background(weather_main);
+            weather_background(weather_main);
 
             // Mise en place des injection HTML
             
