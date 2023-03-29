@@ -6,7 +6,7 @@
     // Input utilisateur
     //  var user_input = document.getElementById('user_input').textContent;
     var ville = "";
-    var input_default = "amsterdam";
+    var input_default = "london";
     ville = input_default; 
 
     // Récupération de l'API météo avec la méthode fetch()
