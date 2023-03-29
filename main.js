@@ -5,15 +5,9 @@
 
     // Input utilisateur
     //  var user_input = document.getElementById('user_input').textContent;
-     var ville = "";
-     var input_default = "Berlin";
-     var user_input = document.getElementById('user_input').value;
-     if (user_input === "") {
-        ville = input_default; 
-     } else {
-        ville = user_input;
-     } 
-
+    var ville = "";
+    var input_default = "amsterdam";
+    ville = input_default; 
 
     // Récupération de l'API météo avec la méthode fetch()
     // https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric
@@ -31,11 +25,11 @@
                 const lat = coord.lat;
 
             // Weather ..
-            const weather = data.weather;
-                const weather_id = weather.id;
-                const weather_main = weather.main;
-                const weather_desc = weather.description;
-                const weather_icon = weather.icon;
+            const WeatherData = data.weather[0];
+                weather_main = WeatherData.main;
+                weather_desc = WeatherData.description;
+
+            weather_background(weather_main,weather_desc);
 
             const base = data.base;
 
@@ -74,8 +68,6 @@
             // Nom de la ville et son id
             const name_id = data.id;
             const name = data.name;
-
-            weather_background(weather_main);
 
             // Mise en place des injection HTML
             
