@@ -20,7 +20,7 @@ header{
     height: 8vh;
     padding: 1% 5% 1% 5% ;
     margin-bottom: 5vh;
-    background: linear-gradient(0.9turn, #0874a3, #3f87a6c5, transparent);
+    background: linear-gradient(0.2turn, #0874a3, #3f87a6c5, transparent);
     color: #ffffff;
     align-items: center;
     display: flex;

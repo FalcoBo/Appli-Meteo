@@ -6,7 +6,7 @@
     // Input utilisateur
     //  var user_input = document.getElementById('user_input').textContent;
      var ville = "";
-     var input_default = "Paris";
+     var input_default = "Berlin";
      var user_input = document.getElementById('user_input').value;
      if (user_input === "") {
         ville = input_default; 
