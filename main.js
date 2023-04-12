@@ -1,34 +1,32 @@
 // Fonction qui permettra de récupérer l'API et de faire afficher ses données dans l'application
 
-// Input par défaut
-var input_default = "Paris";
-var ville = ""
+// Définir la valeur par défaut de la ville
+const DEFAULT_VILLE = "Paris";
 
-// Form_input.addEventListener('submit', function(event) {
-//     // Empêcher la soumission du formulaire par défaut
-//     event.preventDefault();
-  
-//     // Récupérer la valeur de l'input
-//     var user_input = document.getElementById('user_input').value;
-  
-//     // Afficher la valeur dans la console
-//     console.log(user_input);
-// });
+// Récupérer la valeur de ville depuis le stockage local
+let ville = localStorage.getItem("ville");
 
-if (user_input === "") {
-    ville = input_default;
-    // Géolocalisation de l'utilisateur
-    // if (navigator.geolocation) {
-    //     navigator.geolocation.getCurrentPosition(function(position) {
-    //       var latitude = position.coords.latitude;
-    //       var longitude = position.coords.longitude;
-    //       console.log("Latitude: " + latitude + ", Longitude: " + longitude);
-    //     });
-    //   } else {
-    //     console.log("La géolocalisation n'est pas supportée par ce navigateur.");
-}else {
-    ville = user_input;
-} 
+// Vérifier si la valeur de ville existe dans le stockage local
+if (!ville) {
+  // Si la valeur de ville n'existe pas, utiliser la valeur par défaut
+  ville = DEFAULT_VILLE;
+}
+
+// Mettre à jour l'élément input avec la valeur actuelle de ville
+document.getElementById("user_input").value = ville;
+
+// Ajouter un gestionnaire d'événements pour la soumission du formulaire
+document.getElementById("Form_input").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const user_input = document.getElementById("user_input").value;
+  ville = user_input || DEFAULT_VILLE;
+  
+  // Enregistrer la nouvelle valeur de ville dans le stockage local
+  localStorage.setItem("ville", ville);
+});
+
+
+
 
 
     // Récupération de l'API météo avec la méthode fetch()
