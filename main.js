@@ -23,7 +23,7 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
   
   // Enregistrer la nouvelle valeur de ville dans le stockage local
   localStorage.setItem("ville", ville);
-  
+
   // Recharger la page automatiquement   
   location.reload();
 });
@@ -92,13 +92,6 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
             const name = data.name;
 
             // Mise en place des injection HTML
-            
-            // OPTIMISATION
-            // function loop_api(donnees_1, donnees_2) {
-            //     for (let i = 0; i < donnees_1.length; i++) {
-            //         document.getElementById(donnees_1[i]).innerHTML = donnees_2[i];
-            //     }
-            // }
 
             // Prevision(lon,lat);
 
