@@ -1,13 +1,35 @@
-// import { weather_background } from './weather/background.js'
+// Fonction qui permettra de récupérer l'API et de faire afficher ses données dans l'application
 
-// Création de la fonction qui permettra de récupérer l'API
-// et de faire afficher ses données dans l'appli 
+// Input par défaut
+var input_default = "Paris";
+var ville = ""
 
-    // Input utilisateur
-    //  var user_input = document.getElementById('user_input').textContent;
-    var ville = "";
-    var input_default = "paris";
-    ville = input_default; 
+// Form_input.addEventListener('submit', function(event) {
+//     // Empêcher la soumission du formulaire par défaut
+//     event.preventDefault();
+  
+//     // Récupérer la valeur de l'input
+//     var user_input = document.getElementById('user_input').value;
+  
+//     // Afficher la valeur dans la console
+//     console.log(user_input);
+// });
+
+if (user_input === "") {
+    ville = input_default;
+    // Géolocalisation de l'utilisateur
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(function(position) {
+    //       var latitude = position.coords.latitude;
+    //       var longitude = position.coords.longitude;
+    //       console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+    //     });
+    //   } else {
+    //     console.log("La géolocalisation n'est pas supportée par ce navigateur.");
+}else {
+    ville = user_input;
+} 
+
 
     // Récupération de l'API météo avec la méthode fetch()
     // https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric
