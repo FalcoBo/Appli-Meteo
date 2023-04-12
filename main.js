@@ -26,9 +26,6 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
 });
 
 
-
-
-
     // Récupération de l'API météo avec la méthode fetch()
     // https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=eb3e55ca0093756f2541d5ad27c5021c&units=metric")
