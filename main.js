@@ -23,6 +23,9 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
   
   // Enregistrer la nouvelle valeur de ville dans le stockage local
   localStorage.setItem("ville", ville);
+  
+  // Recharger la page automatiquement   
+  location.reload();
 });
 
 
@@ -40,6 +43,8 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
             const coord = data.coord;
                 const lon = coord.lon;
                 const lat = coord.lat;
+
+            // Map(lat,lon);
 
             // Weather ..
             const WeatherData = data.weather[0];
