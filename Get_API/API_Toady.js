@@ -14,12 +14,12 @@ function DayAPI(ville) {
                 const lon = coord.lon;
                 const lat = coord.lat;
 
-            // Météo
-            const weather = data.weather;
-                const weather_id = weather.id;
-                const weather_main = weather.main;
-                const weather_desc = weather.description;
-                const weather_icon = weather.icon;
+            // Weather ..
+            const WeatherData = data.weather[0];
+                weather_main = WeatherData.main;
+                weather_desc = WeatherData.description;
+
+            weather_background(weather_main,weather_desc);
 
             const base = data.base;
 
@@ -58,8 +58,6 @@ function DayAPI(ville) {
             // Nom de la ville et son id
             const name_id = data.id;
             const name = data.name;
-
-            weather_background(weather_main);
 
             // Mise en place des injection HTML
             

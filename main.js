@@ -6,7 +6,7 @@
     // Input utilisateur
     //  var user_input = document.getElementById('user_input').textContent;
     var ville = "";
-    var input_default = "london";
+    var input_default = "paris";
     ville = input_default; 
 
     // Récupération de l'API météo avec la méthode fetch()
@@ -66,19 +66,19 @@
             const timezone = data.timezone;
 
             // Nom de la ville et son id
-            const name_id = data.id;
+            // const name_id = data.id;
             const name = data.name;
 
             // Mise en place des injection HTML
             
             // OPTIMISATION
-            // Faire une boucle pour simplifier et réduire la taille du code ?
-            // var tab = [] 
             // function loop_api(donnees_1, donnees_2) {
-            //     while (tab.length)
-            //     document.getElementById('donnees_1').innerHTML = donnees_2;
+            //     for (let i = 0; i < donnees_1.length; i++) {
+            //         document.getElementById(donnees_1[i]).innerHTML = donnees_2[i];
+            //     }
             // }
 
+            // Prevision(lon,lat);
 
             // Name
             document.getElementById('ville').innerHTML = name;
