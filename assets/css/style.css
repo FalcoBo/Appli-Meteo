@@ -108,10 +108,35 @@ input{
     margin: 4%;
 }
 
+/* Map */
+
+.back-map{
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+    background-color: rgb(49, 49, 49);
+}
+
+#map{
+    width: 50%;
+    height: 50vh;
+    margin: 5% 0 5% 0;
+    border: none;
+    border-radius: 25px;
+}
+
+hr{
+    width: 75%;
+    height: 1px;
+    color: #ffffff;
+}
+
 /* FOOTER */
 
 footer{
     width: 90%;
     height: 15vh;
-    padding: 0 5% 0 5%;
+    padding: 2% 5% 2% 5%;
+    background-color: rgb(49, 49, 49);
+    color: #ffffff;
 }

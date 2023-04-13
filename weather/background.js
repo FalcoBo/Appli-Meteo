@@ -1,4 +1,4 @@
-function weather_background(weather_main, weather_desc) {   
+function weather_background(weather_main, weather_desc, time) {   
     // Variable changement du background
     // Ciel nuageux
     const background_video = document.getElementById('background_video');
@@ -10,6 +10,8 @@ function weather_background(weather_main, weather_desc) {
     // Pluie
     } else if (weather_main =  "Rainy") {
         background_video.src = "./assets/video/Clouds.mp4";
+    } else if (time = "night") {
+        background_video.src = "./assets/video/night.mp4";
     } else {
         background_video.src = "";
     }
