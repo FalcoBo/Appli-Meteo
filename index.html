@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/icon/cloud.svg">
     <title> - Météo - </title>
 </head>
 <body>
@@ -17,8 +18,23 @@
     <h1>météo</h1>
     <form id="Form_input" action="" method="post">
         <input type="text" id="user_input" placeholder="Rechercher ...">
+        <button>
+            <img src="./assets/icon/search.svg" alt="">
+        </button>
     </form>
+
+    <!-- Menu -->
+
+    <button class="menu-btn">
+        <img src="./assets/icon/menu.svg" alt="">
+    </button>
 </header>
+
+<div id="burger_menu">
+    <p>test</p>
+    <p>test</p>
+    <p>test</p>
+</div>
 
 <div id="first_data">
     <h1><span id="ville"></span></h1>
@@ -45,16 +61,15 @@
 
     <!-- Température ressentie -->
     <div id="card" class="var_temp">
-        <p>Température ressentit : <span id="feels"></span> °C</p>
+        <p>Ressentit : <br> <span id="feels"></span> °C</p>
+    </div>
+
+    <div id="card" class="var_temp">
         <p>Pression : <span id="pressure"></span> Mpa</p>
         <p>Humiditée : <span id="humidity"></span> %</p>
     </div>
 
-    <!-- Coordonnées de la ville -->
-    <div id="card" class="coord">
-        <p>Longitude : <span id="lon"></span> °C</p>
-        <p>Lattitude : <span id="lat"></span> °C</p>
-    </div>
+    
 
     <!-- Données liées au vent -->
     <div id="card" class="wind">
@@ -74,6 +89,12 @@
         <p>Levé du soleil : <span id="sys_sunrise"></span></p>
         <p>Couché du soleil : <span id="sys_sunset"></span></p>
     </div>
+
+    <!-- Coordonnées de la ville -->
+    <div id="card" class="coord">
+        <p>Longitude : <span id="lon"></span> °C</p>
+        <p>Lattitude : <span id="lat"></span> °C</p>
+    </div>
 </div>
 
 <div class="back-map">
@@ -86,6 +107,7 @@
 </footer>
 
 <script src="/main.js"></script>
+<script src="./menu/burger.js"></script>
 <script src="/weather/background.js"></script>
 <script src="./Map/map.js"></script>
 <script src="/Get_API/API_Toady.js"></script>

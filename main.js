@@ -71,6 +71,7 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
                 const wind_speed = wind.wind_speed;
                 const wind_deg = wind.deg;
                 const wind_gust = wind.gust;
+
             // Données liées aux nuages 
             const clouds = data.clouds;
                 const all_clouds = clouds.all;
