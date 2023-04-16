@@ -44,7 +44,7 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
                 const lon = coord.lon;
                 const lat = coord.lat;
 
-            // Map(lat,lon);
+            Map(lat,lon);
 
             // Weather ..
             const WeatherData = data.weather[0];
