@@ -1,0 +1,11 @@
+/* Burger menu */
+
+.menu-btn{
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+#burger_menu{
+    display: none;
+}

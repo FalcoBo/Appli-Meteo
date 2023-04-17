@@ -72,6 +72,11 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
                 const wind_deg = wind.deg;
                 const wind_gust = wind.gust;
 
+            // Ajout d'une fonction pour la boussole
+            const angle = wind_deg * Math.PI / 180;
+            console.log(angle);
+            dessinerBoussole(angle);
+
             // Données liées aux nuages 
             const clouds = data.clouds;
                 const all_clouds = clouds.all;

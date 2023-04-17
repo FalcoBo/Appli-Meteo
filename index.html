@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./link.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="./assets/icon/cloud.svg">
     <title> - Météo - </title>
@@ -15,6 +16,11 @@
 
 <!-- HEADER -->
 <header>
+    <!-- Menu -->
+
+    <button class="menu-btn">
+        <img src="./assets/icon/menu.svg" alt="">
+    </button>
     <h1>météo</h1>
     <form id="Form_input" action="" method="post">
         <input type="text" id="user_input" placeholder="Rechercher ...">
@@ -22,12 +28,6 @@
             <img src="./assets/icon/search.svg" alt="">
         </button>
     </form>
-
-    <!-- Menu -->
-
-    <button class="menu-btn">
-        <img src="./assets/icon/menu.svg" alt="">
-    </button>
 </header>
 
 <div id="burger_menu">
@@ -61,39 +61,58 @@
 
     <!-- Température ressentie -->
     <div id="card" class="var_temp">
-        <p>Ressentit : <br> <span id="feels"></span> °C</p>
+        <p>Température Ressentit</p>
+        <span id="feels"></span> °C
     </div>
 
+    <!-- Pression -->
     <div id="card" class="var_temp">
-        <p>Pression : <span id="pressure"></span> Mpa</p>
-        <p>Humiditée : <span id="humidity"></span> %</p>
+        <p>Pression</p>
+        <span id="pressure"></span> Mpa
     </div>
 
-    
+    <!-- Taux d'humidité -->
+    <div id="card" class="var_temp">
+        <p>Humiditée</p>
+        <span id="humidity"></span> %
+    </div>
 
     <!-- Données liées au vent -->
     <div id="card" class="wind">
-        <p>Vitesse du vent : <span id="wind_speed"></span></p>
-        <p>Vent deg : <span id="wind_deg"></span></p>
+        <p>Vitesse du vent<span id="wind_speed"></span></p>
         <p>Raffale de vent : <span id="wind_gust"></span></p>
+    </div>
+
+    <div id="card">
+        <p>Direction du vent</p>
+        <p>Vent deg<span id="wind_deg"></span></p>
+        <canvas id="boussole"></canvas>
+        <p class="nord">Nord</p>
+        <p class="sud">Sud</p>
+        <p class="est">Est</p>
+        <p class="ouest">Ouest</p>
     </div>
 
     <!-- Données liées au nuages -->
     <div id="card">
-        <p>Nuages : <span id="clouds"></span></p>
+        <p>Nuage</p>
+        <span id="clouds"></span>
     </div>
 
     <!-- Données Générales (pays ...) -->
     <div id="card" class="generales">
-        <p>Pays : <span id="sys_country"></span></p>
-        <p>Levé du soleil : <span id="sys_sunrise"></span></p>
-        <p>Couché du soleil : <span id="sys_sunset"></span></p>
+        <p>Levé du soleil</p>
+        <span id="sys_sunrise"></span>
+        <p>Couché du soleil</p>
+        <span id="sys_sunset"></span>
     </div>
 
     <!-- Coordonnées de la ville -->
     <div id="card" class="coord">
-        <p>Longitude : <span id="lon"></span> °C</p>
-        <p>Lattitude : <span id="lat"></span> °C</p>
+        <p>Longitude</p>
+        <span id="lon"></span> °C
+        <p>Lattitude</p>
+        <span id="lat"></span> °C
     </div>
 </div>
 
@@ -107,10 +126,12 @@
         <p>© 2021 - Météo - </p>
 </footer>
 
-<script src="/main.js"></script>
+<!-- SCRIPTS -->
+<script src="./main.js"></script>
 <script src="./menu/burger.js"></script>
 <script src="/weather/background.js"></script>
 <script src="/Map/map.js"></script>
 <script src="/Get_API/API_Toady.js"></script>
+<script src="./Boussole/Boussole.js"></script>
 </body>
 </html>

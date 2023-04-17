@@ -64,19 +64,6 @@ header button{
     border: none;
 }
 
-/* Burger menu */
-
-.menu-btn{
-    width: auto;
-    height: auto;
-    cursor: pointer;
-}
-
-#burger_menu{
-    display: none;
-}
-
-
 /* CONTENTS */
 
 #first_data{
@@ -130,7 +117,7 @@ header button{
     background: linear-gradient(0.52turn,rgb(49, 49, 49),rgb(49, 49, 49), rgb(83, 83, 83));
     color: aliceblue;
     transition: 0.35s;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 #card span{
