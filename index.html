@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./link.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/burger.css">
     <link rel="icon" href="./assets/icon/cloud.svg">
     <title> - Météo - </title>
 </head>
@@ -17,11 +18,12 @@
 <!-- HEADER -->
 <header>
     <!-- Menu -->
-
-    <button class="menu-btn">
-        <img src="./assets/icon/menu.svg" alt="">
-    </button>
-    <h1>météo</h1>
+    <div class="header-menu">
+        <button class="menu-btn">
+            <img src="./assets/icon/menu.svg" alt="">
+        </button>
+        <h1>météo</h1>
+    </div>
     <form id="Form_input" action="" method="post">
         <input type="text" id="user_input" placeholder="Rechercher ...">
         <button>
@@ -79,18 +81,24 @@
 
     <!-- Données liées au vent -->
     <div id="card" class="wind">
-        <p>Vitesse du vent<span id="wind_speed"></span></p>
-        <p>Raffale de vent : <span id="wind_gust"></span></p>
+        <p>Vitesse du vent</p>
+        <span id="wind_speed"></span>
+        <p>Raffale de vent</p>
+        <span id="wind_gust"></span>
     </div>
 
     <div id="card">
         <p>Direction du vent</p>
-        <p>Vent deg<span id="wind_deg"></span></p>
-        <canvas id="boussole"></canvas>
+        <span id="wind_deg"></span> °C
         <p class="nord">Nord</p>
+        <div class="boussole_dire">
+            <p class="est">Ouest</p>
+            <div id="compass">
+                <div class="arrow"></div>
+            </div>              
+            <p class="ouest">Est</p>
+        </div>
         <p class="sud">Sud</p>
-        <p class="est">Est</p>
-        <p class="ouest">Ouest</p>
     </div>
 
     <!-- Données liées au nuages -->
