@@ -1,7 +1,9 @@
-const menuBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('#menu_burger');
-
-menuBtn.addEventListener('click', () => {
-  menuBtn.classList.toggle('active');
-  menu.style.display = "block";
+var menubtn = document.getElementById("menu-btn");
+menubtn.addEventListener("click", function() {
+  var menu = document.getElementById("menu");
+  if (menu.style.display === "none") {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
 });
