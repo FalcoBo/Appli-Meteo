@@ -1,0 +1,10 @@
+#prev-btn{
+    width: 10%;
+    height: 5vh;
+    cursor: pointer;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    transition: 0.35s;
+}

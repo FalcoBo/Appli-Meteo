@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./link.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header-footer.css">
     <link rel="stylesheet" href="./assets/css/burger.css">
+    <link rel="stylesheet" href="./assets/css/prevision.css">
     <link rel="icon" href="./assets/icon/cloud.svg">
     <title> - Météo - </title>
 </head>
@@ -14,6 +16,18 @@
 
 <!-- Vidéo background -->
 <video autoplay muted loop id="background_video" src="./assets/video/ciel.mp4"></video>
+
+<div id="menu">
+    <div class="nav-burger-menu">
+        <button id="cross-btn">
+            <img src="./assets/icon/cross.png" alt="">
+        </button>
+    </div>
+    <div class="array">
+        <!-- <span id="ville"></span>
+        <span id="temp"></span> °C -->
+    </div>
+</div>
 
 <!-- HEADER -->
 <header>
@@ -31,12 +45,6 @@
         </button>
     </form>
 </header>
-
-<div id="menu">
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-</div>
 
 <div id="first_data">
     <h1><span id="ville"></span></h1>
@@ -90,7 +98,7 @@
     <div id="card">
         <p>Direction du vent</p>
         <span id="wind_deg"></span> °C
-        <p class="nord">Nord</p>
+        <!-- <p class="nord">Nord</p>
         <div class="boussole_dire">
             <p class="est">Ouest</p>
             <div id="compass">
@@ -98,7 +106,7 @@
             </div>              
             <p class="ouest">Est</p>
         </div>
-        <p class="sud">Sud</p>
+        <p class="sud">Sud</p> -->
     </div>
 
     <!-- Données liées au nuages -->
@@ -108,12 +116,12 @@
     </div>
 
     <!-- Données Générales (pays ...) -->
-    <div id="card" class="generales">
+    <!-- <div id="card" class="generales">
         <p>Levé du soleil</p>
         <span id="sys_sunrise"></span>
         <p>Couché du soleil</p>
         <span id="sys_sunset"></span>
-    </div>
+    </div> -->
 
     <!-- Coordonnées de la ville -->
     <div id="card" class="coord">
@@ -124,11 +132,19 @@
     </div>
 </div>
 
+<!-- Ajouter à la liste -->
+<button id="add-btn">AJOUTER A LA LISTE</button>
+
+<!-- Prévisions -->
+<!-- <a id="prev-btn" href="./prevision.html">VOIR LES PREVISIONS</a> -->
+
 <div class="back-map">
     <h2>Localisation</h2>
     <iframe  id="map" src=""></iframe>
 </div>
+
 <hr>
+
 <!-- FOOTER -->
 <footer>
         <p>© 2021 - Météo - </p>
@@ -141,5 +157,6 @@
 <script src="./JS/Map/map.js"></script>
 <script src="./JS/Get_API/API_Toady.js"></script>
 <script src="./JS//Boussole/Boussole.js"></script>
+<script src="./list.js"></script>
 </body>
 </html>

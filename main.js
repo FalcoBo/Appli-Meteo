@@ -1,14 +1,9 @@
-// Fonction qui permettra de récupérer l'API et de faire afficher ses données dans l'application
-
 // Définir la valeur par défaut de la ville
 const DEFAULT_VILLE = "Paris";
-
-// Récupérer la valeur de ville depuis le stockage local
 let ville = localStorage.getItem("ville");
 
 // Vérifier si la valeur de ville existe dans le stockage local
 if (!ville) {
-  // Si la valeur de ville n'existe pas, utiliser la valeur par défaut
   ville = DEFAULT_VILLE;
 }
 
@@ -20,11 +15,8 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
   event.preventDefault();
   const user_input = document.getElementById("user_input").value;
   ville = user_input || DEFAULT_VILLE;
-  
   // Enregistrer la nouvelle valeur de ville dans le stockage local
   localStorage.setItem("ville", ville);
-
-  // Recharger la page automatiquement   
   location.reload();
 });
 
@@ -73,7 +65,7 @@ document.getElementById("Form_input").addEventListener("submit", function(event)
                 const wind_gust = wind.gust;
 
             // Ajout d'une fonction pour la boussole
-            updateCompass(wind_deg)
+            // updateCompass(wind_deg)
 
             // Données liées aux nuages 
             const clouds = data.clouds;

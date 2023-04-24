@@ -1,0 +1,66 @@
+*{
+    max-width: 100%;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* HEADER */
+header{
+    width: 90%;
+    height: 8vh;
+    padding: 1% 5% 1% 5% ;
+    margin-bottom: 5vh;
+    background-color: rgb(49, 49, 49);
+    color: #ffffff;
+    align-items: center;
+    display: flex;
+    gap: 25%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+header h1{
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 200;
+}
+
+form{
+    width: 20%;
+    display: flex;
+    gap: 2%;
+    border: none;
+    background-color: rgb(49, 49, 49);
+    color: #ffffff;
+}
+
+input{
+    width: 100%;
+    height: 4vh;
+    padding: 0.2% 2% 0.2% 0%;
+    color: #ffffff;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+input::placeholder{
+    color: #ffffff;
+}
+
+header button{
+    width: 15%;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+/* FOOTER */
+
+footer{
+    width: 90%;
+    height: 15vh;
+    padding: 2% 5% 2% 5%;
+    background-color: rgb(49, 49, 49);
+    color: #ffffff;
+}
