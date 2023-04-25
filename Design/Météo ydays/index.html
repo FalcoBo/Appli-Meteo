@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="">
+    <title>The.Weather</title>
+</head>
+<body>
+    
+    <video autoplay muted loop id="background_video" src="./assets/video/pluie.mp4"></video>
+
+    <section id="wrapper">
+        <main>
+            <p class="app-title">the.weather</p>
+
+            <section id="main-data">
+                <span id="temp">16°C</span>
+                <div id="main-data-info">
+                    <div class="main-data-info-city">
+                        <span id="ville">London</span>
+                        <p>06:09 - Sunday, 6 Oct '19</p>
+                    </div>
+                    <!-- <div class="main-data-info-weather">
+                        <div id="logo"></div>
+                        <span id="weather-name"></span>
+                    </div> -->
+                </div>
+            </section>
+        </main>
+
+        <section id="other-data">
+            <div class="top">
+                <form id="Form_input" action="" method="post">
+                    <input type="text" id="user_input" placeholder="Another location">
+                </form>
+                <button id="btn-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+            <div class="other-cards" id="other-cities">
+                <p>Birmingham</p>
+                <p>Manchester</p>
+                <p>New York</p>
+                <p>California</p>
+            </div>
+            <hr>
+            <div class ="other-cards" id="weather-details">
+                <p class="weather-details-title">Weather details</p>
+                <div class="details-cards" id="clouds">
+                    <p>Cloudy</p>
+                    <p>86%</p>
+                </div>
+                <div class="details-cards" id="humidity">
+                    <p>Humidity</p>
+                    <p>62%</p>
+                </div>
+                <div class="details-cards" id="Wind">
+                    <p>Wind</p>
+                    <p>8km/h</p>
+                </div>
+                <div class="details-cards" id="rain">
+                    <p>Rain</p>
+                    <p>8mm</p>
+                </div>
+            </div>
+            <hr>
+        </section>
+    </section>
+
+<script src="./main.js"></script>
+</body>
+</html>
